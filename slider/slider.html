@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .slider {
+            height: 500px;
+            width: 70%;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #slide-image {
+            width: 100%;
+            height: 600px;
+        }
+    </style>
+    <script>
+        var images = ["images/a.jpg", "images/b.jpg",
+            "images/c.jpg", "images/d.jpg",
+            "images/e.jpg"
+        ]
+        var i = 0;
+        function slides() {
+            document.getElementById("slide-image").src = images[i];
+            if (i < (images.length - 1))
+                i++;
+            else
+                i = 0;
+        }
+        setInterval(slides, 2000)
+    </script>
+</head>
+
+<body>
+    <div class="slider">
+        <h1>Image slide show using html and javascript</h1>
+        <hr>
+        <img src="images/a.jpg" alt="" id="slide-image">
+    </div>
+</body>
+
+</html>
